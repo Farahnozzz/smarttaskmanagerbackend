@@ -56,6 +56,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList(
+                "https://smart-task-manager-frontend-farahnozs-projects-e7c59bcf.vercel.app",
                 "http://localhost:3000",
                 "http://localhost:5173",
                 "http://localhost:5174"
@@ -88,4 +89,3 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
-

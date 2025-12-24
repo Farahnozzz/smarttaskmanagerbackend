@@ -14,10 +14,15 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173", "http://localhost:5174", "http://localhost:5175")
-                        .allowedMethods("*")
+                        .allowedOrigins(
+                                "https://smart-task-manager-frontend-farahnozs-projects-e7c59bcf.vercel.app",
+                                "http://localhost:5173",
+                                "http://localhost:5174",
+                                "http://localhost:5175"
+                        )
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
-                        .allowCredentials(false);  // ❗ IMPORTANT: Must be FALSE if frontend does not use credentials
+                        .allowCredentials(true);
             }
         };
     }
